@@ -1,3 +1,5 @@
+โจทย์ A — ตรวจสอบเกรด
+
 ```mermaid
 flowchart TD
 Start([Start]) --> Input[/รับคะแนน score/]
@@ -11,5 +13,34 @@ Start([Start]) --> Input[/รับคะแนน score/]
  D4 --Yes --> D[เกรด = D]
  D4 -- No --> F[เกรด = F]
  A & B & C & D & F --> Output[/แสดงเกรด/]
- Output --> End([End]) 
+ Output --> End([End])
+```
+
+---
+
+โจทย์ B — หาค่าสูงสุดจาก 2 ตัวเลข
+
+```mermaid
+flowchart TD
+ Start([Start]) --> Input[/รับ a และ b/]
+ Input --> Check{a > b?}
+ Check -- Yes --> ShowA[/แสดง a/]
+ Check -- No --> ShowB[/แสดง b/]
+ ShowA --> End([End])
+ ShowB --> End
+```
+
+---
+
+โจทย์ C — นับจาก 1 ถึง N
+
+```mermaid
+flowchart TD
+ Start([Start]) --> Input[/รับ N/]
+ Input --> i1[i = 1]
+ i1 --> Check{i <= N?}
+ Check -- Yes --> wi[/พิมพ์ i/]
+ Check -- No --> End([End])
+ wi --> iplus[i = i + 1]
+ iplus --> Check
 ```
